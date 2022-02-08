@@ -2,18 +2,17 @@
 *Author:* *Eric Samakinwa* 
 
 > This is a work in progress (WIP)
- 
-### Why Ansible?
-* Easy control over multiple nodes (Automation)
 
-* Agentless: 
-
-### Ansible playbooks for day-to-day Linux SysAdmin activities
 Ansible is a configuration management tool that will help you do your daily tasks easier and faster. It's a great tool for system administrators as it helps them to achieve standardization and collaborate on daily activities, including:
 
 1. Installing, configuring, and provisioning servers and applications
 2. Updating and upgrading systems regularly
 3. Monitoring, mitigating, and troubleshooting issue
+
+### Why Ansible?
+* Easy control over multiple nodes (Automation)
+
+* Agentless
 
 ### Ansible configuration file hierarchy
 Ansible configuration is applied on a first-found, first-applied basis. The hierarchical structure of ansible configuration provides options to create a different configuration for individual projects, depending on the requirements of such project. To check the current location of ansible on your control node: 

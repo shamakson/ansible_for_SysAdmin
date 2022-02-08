@@ -32,18 +32,33 @@ It is important to note that since Red Hat bought Ansible, the configuration fil
 ### Getting the most out of Ansible configuration file
 There are some commands that could helps us get started with ansible configuration.
 
-* ansible-config view: Prints the current configuration file content.
-
-* ansible-config dump: Gives full details of effective settings that are set, and the default where an option is not set. These can be further explored with options:
+* Print the current configuration file content;
 ```bash
-ansible-config dump | head # Displays the current effective setting  
+ansible-config view
+```
+* Get full details of effective settings that are set, and the default where an option is not set; 
+```bash
+ansible-config dump 
+```
+   * These can be further explored using the following options:
+```bash
+    ansible-config dump | head # Displays the current effective setting  
 ```
 
 ```bash
-ansible-config dump --only-changed # Displays setting changed from default
+    ansible-config dump --only-changed # Displays setting changed from default
 ```
-
+* Show settings that can be made, either through variables or directives in the configuration file or playbook.
+```bash
+ansible-config list
+```
 * To display all possible categories in the configuration file;
 ```bash
-grep -E '^\[*]' /etc/ansible/ansible.cfg # let's assume it is in the default location
+grep -E '^\[.*\]' /etc/ansible/ansible.cfg # let's assume it is in the default location
 ```
+* Display a parameter in the configuration file, followed by characters in a specific number of lines after it. This is useful in building a project specific inventory.
+```bash
+ansible-config list | grep -A5  COVERAGE_REMOTE_PATHS # Displays 5 lines after COVERAGE_REMOTE_PATHS in the config file
+```
+
+

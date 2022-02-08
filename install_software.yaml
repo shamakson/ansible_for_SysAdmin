@@ -1,0 +1,32 @@
+---
+- name: Install and/or update softwares
+  hosts: poolroom
+  become: true
+  tasks:
+          - name: Install softwares
+            package:
+                    name: 
+                            - bash-completion
+                            - vim 
+                            - qgis 
+                            - gedit
+                            - tree
+                    state: present
+          - name: Remove softwares
+            package:
+                    name: 
+                            - terminator 
+                            - cowsay
+                            - xedit
+                    state: absent
+          - name: Update softwares if present
+            package:
+                    name: 
+                            - nano
+                            - openssh*
+                    state: latest
+          - name: Show hostname
+            debug:
+                    msg: "This host is {{ ansible_hostname }}"
+            
+...

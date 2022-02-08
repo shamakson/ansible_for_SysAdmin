@@ -62,6 +62,37 @@ grep -E '^\[.*\]' /etc/ansible/ansible.cfg # let's assume it is in the default l
 ```bash
 ansible-config list | grep -A5  COVERAGE_REMOTE_PATHS # Displays 5 lines after COVERAGE_REMOTE_PATHS in the config file
 ```
+### Working with Ansible inventory
+Ansible works against multiple managed nodes or “hosts” at the same time, therefore using a list or group of lists known as inventory. Once the inventory is defined, hosts or groups can be selected by specifying there names for Ansible to run against. The default location for inventory is /etc/ansible/hosts. However, different inventory file can be specifeid at the command line using the -i /path/to/inventory.
+
+### Building your inventory
+* To add a range of IP addresses;
+```txt
+192.XX.X.[1:29]
+```
+
+#### Listing inventory host
+* All hosts in inventory;
+```bash
+ansible all --list-hosts
+```
+* All hosts in a group
+```bash
+ansible poolroom --list-hosts # List host under the group called "poolroom"
+```
+* Ungrouped hosts
+```bash
+ansible ungrouped --list-hosts # nodes that doesnt belong to any group in the inventory
+```
+* Display all hosts in yaml format
+```bash
+ansible-inventory --list --yaml 
+```
+* Show group in yaml format
+```bash
+ansible-inventory --graph --yaml webservers # group name is "webservers"
+```
+
 
 ---
 > Reference: Ansible Automation for the Red Hat Enterprise Linux 8 Exam (EX294) book by Andrew Mallet. 

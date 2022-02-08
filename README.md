@@ -1,7 +1,8 @@
 # Ansible for Linux SysAdmin/Engineer
 *Author:* *Eric Samakinwa* 
-> This is a work in progress and will be updated 
 
+> This is a work in progress (WIP)
+ 
 ### Why Ansible?
 * Easy control over multiple nodes (Automation)
 
@@ -31,7 +32,7 @@ The configuration file will be searched for in the following order:
 
 It is important to note that since Red Hat bought Ansible, the configuration file is missing after installing on the latest version of ubuntu *(20.04 LTS focal)*. However, you can find this file directly from the official website or documentation of ansible (Here: https://docs.ansible.com/).
 
-### Getting the most out of Ansible configuration file
+#### Getting the most out of Ansible configuration file
 There are some commands that could helps us get started with ansible configuration.
 
 * Print the current configuration file content;
@@ -62,10 +63,11 @@ grep -E '^\[.*\]' /etc/ansible/ansible.cfg # let's assume it is in the default l
 ```bash
 ansible-config list | grep -A5  COVERAGE_REMOTE_PATHS # Displays 5 lines after COVERAGE_REMOTE_PATHS in the config file
 ```
+
 ### Working with Ansible inventory
 Ansible works against multiple managed nodes or “hosts” at the same time, therefore using a list or group of lists known as inventory. Once the inventory is defined, hosts or groups can be selected by specifying there names for Ansible to run against. The default location for inventory is /etc/ansible/hosts. However, different inventory file can be specifeid at the command line using the -i /path/to/inventory.
 
-### Building your inventory
+#### Building your inventory
 * To add a range of IP addresses;
 ```txt
 192.XX.X.[1:29]
@@ -112,8 +114,9 @@ ansible-inventory --graph --yaml webservers # group name is "webservers"
 ```
 
 
+
+
 ---
 > Reference: Ansible Automation for the Red Hat Enterprise Linux 8 Exam (EX294) book by Andrew Mallet. 
 ---
-
 

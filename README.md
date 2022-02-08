@@ -70,7 +70,25 @@ Ansible works against multiple managed nodes or “hosts” at the same time, th
 ```txt
 192.XX.X.[1:29]
 ```
+* To add a group called poolroom, with nodes IP addresses range 192.XX.X.[1:29];
+```txt
+[poolroom]
+192.XX.X.[1:29]
+```
+* Using nested group
+```txt
+[poolroom]
+server1
+server2
 
+[data_center]
+server3
+server4
+
+[all:children]
+poolroom
+data_center
+```
 #### Listing inventory host
 * All hosts in inventory;
 ```bash

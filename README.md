@@ -1,5 +1,6 @@
 # Ansible for Linux SysAdmin/Engineer
-*Author:* *Eric Samakinwa* (This is a work in progress and will be updated ASAP)
+*Author:* *Eric Samakinwa* 
+> This is a work in progress and will be updated 
 
 ### Why Ansible?
 * Easy control over multiple nodes (Automation)

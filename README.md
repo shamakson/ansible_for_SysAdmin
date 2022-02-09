@@ -2,17 +2,32 @@
 *Author:* *Eric Samakinwa* 
 
 > This is a work in progress (WIP)
+ 
+### Why Ansible?
+* Easy control over multiple nodes (Automation): High-level plays could be created to perform series of tasks on the hosts, as specified in the play. A file that contains one or more plays is called a playbook.
 
-Ansible is a configuration management tool that will help you do your daily tasks easier and faster. It's a great tool for system administrators as it helps them to achieve standardization and collaborate on daily activities, including:
+* Agentless: Work is pushed to remote hosts when Ansible executes. Modules are the programs that perform the actual work of the tasks of a play. Ansible is immediately useful because it comes with hundreds of core modules that perform useful system administrative work.
+
+
+
+### Ansible playbooks for day-to-day Linux SysAdmin activities
+Ansible is a open-source configuration management, software provisioning, and application deployment tool. It runs on Unix-like operating systems, and can configure both Unix-like systems and also Microsoft Windows. It's a great tool for system administrators as it helps them to achieve standardization and collaborate on daily activities, including:
 
 1. Installing, configuring, and provisioning servers and applications
 2. Updating and upgrading systems regularly
 3. Monitoring, mitigating, and troubleshooting issue
 
-### Why Ansible?
-* Easy control over multiple nodes (Automation)
+## Ansible Components
 
-* Agentless
+* Ansible Configuration
+* Host Inventory
+* Core Module
+* Custom Modules
+* Playbooks
+* Connection Plugins
+* Plugins (email notifications etc.)
+
+Control and Managed node: Ansible operations are initiated from the control node, and executed on the managed nodes. All nodes must have ssh and python installed.
 
 ### Ansible configuration file hierarchy
 Ansible configuration is applied on a first-found, first-applied basis. The hierarchical structure of ansible configuration provides options to create a different configuration for individual projects, depending on the requirements of such project. To check the current location of ansible on your control node: 
@@ -111,8 +126,6 @@ ansible-inventory --list --yaml
 ```bash
 ansible-inventory --graph --yaml webservers # group name is "webservers"
 ```
-
-
 
 
 ---

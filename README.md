@@ -1,4 +1,4 @@
-# Ansible for Linux SysAdmin/Engineer
+# Ansible Automation for Linux Engineer
 *Author:* *Eric Samakinwa* 
 
 > This is a work in progress (WIP)
@@ -10,8 +10,8 @@
 
 
 
-### Ansible playbooks for day-to-day Linux SysAdmin activities
-Ansible is a open-source configuration management, software provisioning, and application deployment tool. It runs on Unix-like operating systems, and can configure both Unix-like systems and also Microsoft Windows. It's a great tool for system administrators as it helps them to achieve standardization and collaborate on daily activities, including:
+### Ansible playbooks for day-to-day Linux SysAdmin/Engineer activities
+Ansible is a open-source configuration management, software provisioning, and application deployment tool. It runs on Unix-like operating systems, and can configure both Unix-like systems and also Microsoft Windows. It's a great tool for system administrators/engineers as it helps them to achieve standardization and collaborate on daily activities, including:
 
 1. Installing, configuring, and provisioning servers and applications
 2. Updating and upgrading systems regularly

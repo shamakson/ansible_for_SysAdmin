@@ -129,6 +129,6 @@ ansible-inventory --graph --yaml webservers # group name is "webservers"
 
 
 ---
-> Reference: Ansible Automation for the Red Hat Enterprise Linux 8 Exam (EX294) book by Andrew Mallet. 
+> Reference: Ansible Automation for the Red Hat Enterprise Linux 8 Exam  
 ---
 
